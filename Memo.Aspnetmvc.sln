@@ -15,18 +15,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B01D3CD5-FCF7-492A-ABBC-4FC46862E291}"
 	ProjectSection(SolutionItems) = preProject
 		.tfignore = .tfignore
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://dake.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Memo.Aspnetmvc\\Memo.Aspnetmvc.csproj
-		SccProjectName1 = Memo.Aspnetmvc
-		SccLocalPath1 = Memo.Aspnetmvc
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
