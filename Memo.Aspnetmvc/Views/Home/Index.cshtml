@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "ListMemo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+    <legend>
+        Add Memo
+    </legend>
+
+    <div class="field">
+        <textarea class="input textarea" placeholder="Create New Memo" id="textId"></textarea>
+    </div>
+    <div class="field">
+        <div class="medium primary btn"><button type="button" id="submit-button">submit</button></div>
+        <div class="medium primary btn"><button type="button" id="clear-button">clear</button></div>
+    </div>
+</fieldset>
+<section>
+    <p id="error"></p>
+    <p id="message"></p>
+    <p id="info" style="display:none">Check added memo, go to <a href="/Home/ListMemo">memo list page</a></p>
+</section>
+
+@section scripts
+{
+    <script src="/Scripts/libs/MEMO/modules/createMemo.js"></script>
+    <script src="/Scripts/libs/MEMO/pages/createMemo.js"></script>
+}
+

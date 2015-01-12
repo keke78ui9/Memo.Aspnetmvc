@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "ListMemo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List All Memo</h2>
+<p>list all memo created at create memo page.</p>
+
+<div class="medium secondary btn">
+    <input type="button" value="Clear Records" id="clear" />
+</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Memo</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="memoTmplTarget"></tbody>
+</table>
+
+<script id="memoTmplRow" type="text/x-jquery-tmpl">
+    <tr>
+        <td>{id}</td>
+        <td>
+            {memo}
+        </td>
+        <td>{date}</td>
+        <td>
+            <div class="small default btn two column">
+                <input type="button" value="Update" onclick="MEMO.modules.listMemo.displayUpdateArea(this)" data-id="{id}" class="switch" gumby-trigger="#actionModal" />
+            </div>
+            <div class="small info btn push_six  two column">
+                <input type="button" value="Delete" onclick="MEMO.modules.listMemo.deleteBtn(this)" data-id="{id}" class="switch" gumby-trigger="#actionModal" />
+            </div>
+        </td>
+    </tr>
+</script>
+
+
+<script id="memoTmplRow" type="text/x-jquery-tmpl">
+    <tr>
+    <td></td>
+    </tr>
+</script>
+
+<div class="modal" id="updateMemoModal">
+    <div class="content">
+        <div class="row">
+            <div class="ten columns centered text-center">
+                <fieldset>
+                    <legend>Update a Memo</legend>
+                    <ul>
+                        <li class="field">
+                            <label class="inline" for="memoTxt">MEMO:</label>
+                            <input class="wide text input" id="memoTxt" type="text" placeholder="wide input" />
+                        </li>
+                    </ul>
+                </fieldset>
+                <div class="medium default btn">
+                    <input type="submit" value="Yes" onclick="MEMO.modules.listMemo.update()" class="memoUpdate" />
+                </div>
+                <div class="medium info btn">
+                    <a href="#" class="switch" id="no-update">No</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="memoModal">
+    <div class="content" id="modal-content">
+        Your memo had been deleted.
+    </div>
+</div>
+
+@section scripts
+{
+<script src="/Scripts/libs/MEMO/modules/listMemo.js"></script>
+<script src="/Scripts/libs/MEMO/pages/listMemo.js"></script>
+}
