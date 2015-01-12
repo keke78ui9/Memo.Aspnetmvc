@@ -1,6 +1,5 @@
-﻿"use strict";
-MEMO.services.dataStorageSvc = (function () {
-
+﻿MEMO.services.dataStorageSvc = (function () {
+    "use strict";
     (function () {
         // immediate ivoke functions come here.
     })();
